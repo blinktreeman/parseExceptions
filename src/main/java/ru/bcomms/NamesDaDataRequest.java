@@ -1,5 +1,6 @@
 package ru.bcomms;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -30,22 +31,20 @@ public class NamesDaDataRequest {
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
 
-        Map<String, Object> responseMap = toHashMap(response.body());
+        Map<String, Object> responseMap = jsonToMap(response.body());
         assert responseMap != null;
-        Map<?, ?> names = (Map<?, ?>) ((Map<?, ?>) ((List<?>) responseMap.get("suggestions")).get(0)).get("data");
-
-        UserDataHolder.getUserData().setName((String) names.get("name"));
-        UserDataHolder.getUserData().setSurname((String) names.get("surname"));
-        UserDataHolder.getUserData().setPatronymic((String) names.get("patronymic"));
+        List<?> suggestions = (List<?>) responseMap.get("suggestions");
+        // Если DaData вернула не пустой ответ
+        if (suggestions.size() != 0) {
+            Map<?, ?> names = (Map<?, ?>) ((Map<?, ?>) suggestions.get(0)).get("data");
+            UserDataHolder.getUserData().setName((String) names.get("name"));
+            UserDataHolder.getUserData().setSurname((String) names.get("surname"));
+            UserDataHolder.getUserData().setPatronymic((String) names.get("patronymic"));
+        }
     }
 
-    private Map<String, Object> toHashMap(String content) {
-        try {
+    private Map<String, Object> jsonToMap(String content) throws JsonProcessingException {
             return new ObjectMapper().readValue(content, HashMap.class);
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-            return null;
-        }
     }
 
 }

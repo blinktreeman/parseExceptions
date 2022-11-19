@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3617ed8-5ca6-4552-ba26-5ddadd217a76" name="Changes" comment="">
+    <list default="true" id="d3617ed8-5ca6-4552-ba26-5ddadd217a76" name="Changes" comment="some correct">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bcomms/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/App.java" afterDir="false" />
@@ -81,6 +81,14 @@
       <workItem from="1668865959018" duration="1120000" />
       <workItem from="1668867107150" duration="6173000" />
     </task>
+    <task id="LOCAL-00001" summary="some correct">
+      <created>1668880842621</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668880842621</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,5 +104,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some correct" />
+    <option name="LAST_COMMIT_MESSAGE" value="some correct" />
   </component>
 </project>

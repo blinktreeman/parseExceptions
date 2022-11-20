@@ -42,8 +42,8 @@ public class UserDataParser {
         if (names.size() < 3) {
             throw new UserDataParseException("Wrong spelling of names, capitalize");
         } else {
-            userData.setName(names.get(0));
-            userData.setSurname(names.get(1));
+            userData.setSurname(names.get(0));
+            userData.setName(names.get(1));
             userData.setPatronymic(names.get(2));
         }
 

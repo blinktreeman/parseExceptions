@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3617ed8-5ca6-4552-ba26-5ddadd217a76" name="Changes" comment="some changes">
+    <list default="true" id="d3617ed8-5ca6-4552-ba26-5ddadd217a76" name="Changes" comment="change DaData request">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/WriteUserDataToFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bcomms/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bcomms/NamesDaDataRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/NamesDaDataRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bcomms/UserDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/UserDataParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\eugen\IdeaProjects\parseExceptions\src\main\java\ru\bcomms" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.bcomms" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -81,7 +84,7 @@
       <workItem from="1668867107150" duration="6173000" />
       <workItem from="1668850864355" duration="438000" />
       <workItem from="1668926898049" duration="76000" />
-      <workItem from="1668902170201" duration="8690000" />
+      <workItem from="1668902170201" duration="15486000" />
     </task>
     <task id="LOCAL-00001" summary="dadata request done">
       <created>1668850961741</created>
@@ -97,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668902971753</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="change DaData request">
+      <created>1668911138406</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668911138406</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dadata request done" />
     <MESSAGE value="some changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
+    <MESSAGE value="change DaData request" />
+    <option name="LAST_COMMIT_MESSAGE" value="change DaData request" />
   </component>
 </project>

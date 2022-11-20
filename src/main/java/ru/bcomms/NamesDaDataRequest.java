@@ -32,11 +32,12 @@ public class NamesDaDataRequest {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
             if (response.statusCode() == 200) {
-                ArrayList<?> responseList = new ObjectMapper().readValue(response.body(), ArrayList.class);
-                Map<?, ?> responseMap = (Map<?, ?>) responseList.get(0);
-                UserDataHolder.getUserData().setName((String) responseMap.get("name"));
-                UserDataHolder.getUserData().setSurname((String) responseMap.get("surname"));
-                UserDataHolder.getUserData().setPatronymic((String) responseMap.get("patronymic"));
+                ArrayList<Map<String, String>> responseList =
+                        new ObjectMapper().readValue(response.body(), ArrayList.class);
+                Map<String, String> responseMap = responseList.get(0);
+                UserDataHolder.getUserData().setName(responseMap.get("name"));
+                UserDataHolder.getUserData().setSurname(responseMap.get("surname"));
+                UserDataHolder.getUserData().setPatronymic(responseMap.get("patronymic"));
             }
         } catch (IOException e) {
             throw new IOException("Error request to DaData API");

@@ -27,22 +27,13 @@ package ru.bcomms;
 
 public class App {
     public static void main(String[] args) {
-
-
-//        Test String = "Онатопп 12.12.1970 Ксения f Сергеевна 322223";
+//        Test String = "Иванов 12.12.1970 Иванович Иван f 322223";
         try {
             UserDataRequest dataRequest = new UserDataRequest();
             dataRequest.requestDataFromUser();
 
             UserDataParser dataParser = new UserDataParser();
             dataParser.parseUserData();
-
-            System.out.println(UserDataHolder.getUserData().getName());
-            System.out.println(UserDataHolder.getUserData().getSurname());
-            System.out.println(UserDataHolder.getUserData().getPatronymic());
-            System.out.println(UserDataHolder.getUserData().getDateOfBirth());
-            System.out.println(UserDataHolder.getUserData().getPhoneNumber());
-            System.out.println(UserDataHolder.getUserData().getGender());
 
         } catch (RuntimeException e) {
             System.err.println(e.getMessage());
@@ -55,5 +46,12 @@ public class App {
             e.getStackTrace();
             System.err.println(e.getMessage());
         }
+
+        System.out.println(UserDataHolder.getUserData().getSurname());
+        System.out.println(UserDataHolder.getUserData().getName());
+        System.out.println(UserDataHolder.getUserData().getPatronymic());
+        System.out.println(UserDataHolder.getUserData().getDateOfBirth());
+        System.out.println(UserDataHolder.getUserData().getPhoneNumber());
+        System.out.println(UserDataHolder.getUserData().getGender());
     }
 }

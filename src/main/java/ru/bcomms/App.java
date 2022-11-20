@@ -25,11 +25,11 @@ package ru.bcomms;
 корректно обработано, пользователь должен увидеть стектрейс ошибки.
  */
 
+import java.io.IOException;
+
 public class App {
     public static void main(String[] args) {
-
-
-//        Test String = "Онатопп 12.12.1970 Ксения f Сергеевна 322223";
+//        Test String = "Иванов 12.12.1970 Иванович Иван m 322223";
         try {
             UserDataRequest dataRequest = new UserDataRequest();
             dataRequest.requestDataFromUser();
@@ -37,23 +37,27 @@ public class App {
             UserDataParser dataParser = new UserDataParser();
             dataParser.parseUserData();
 
-            System.out.println(UserDataHolder.getUserData().getName());
-            System.out.println(UserDataHolder.getUserData().getSurname());
-            System.out.println(UserDataHolder.getUserData().getPatronymic());
-            System.out.println(UserDataHolder.getUserData().getDateOfBirth());
-            System.out.println(UserDataHolder.getUserData().getPhoneNumber());
-            System.out.println(UserDataHolder.getUserData().getGender());
-
-        } catch (RuntimeException e) {
-            System.err.println(e.getMessage());
-
-        }
-        try {
             NamesDaDataRequest namesDaDataRequest = new NamesDaDataRequest();
             namesDaDataRequest.sendDaDataRequest();
-        } catch (Exception e) {
-            e.getStackTrace();
+
+        } catch (RuntimeException | IOException | InterruptedException e) {
             System.err.println(e.getMessage());
         }
+
+        try {
+            WriteUserDataToFile writeUserDataToFile = new WriteUserDataToFile();
+            writeUserDataToFile.writeDataToFile();
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+            e.getStackTrace();
+        }
+
+
+        System.out.println(UserDataHolder.getUserData().getSurname());
+        System.out.println(UserDataHolder.getUserData().getName());
+        System.out.println(UserDataHolder.getUserData().getPatronymic());
+        System.out.println(UserDataHolder.getUserData().getDateOfBirth());
+        System.out.println(UserDataHolder.getUserData().getPhoneNumber());
+        System.out.println(UserDataHolder.getUserData().getGender());
     }
 }

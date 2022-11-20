@@ -37,10 +37,11 @@ public class UserDataParser {
                 .orElseThrow(() -> new UserDataParseException("Wrong date of birth please enter as dd.mm.yyyy"));
         userData.setDateOfBirth(dateOfBirth);
 
-        // Находим имена (начинаются с заглавной буквы)
-        List<String> names = userDataList.stream().filter(x -> Character.isUpperCase(x.charAt(0))).toList();
+        // Находим имена (Ф, И и О состоит более чем из одной буквы и не содержит цифр)
+        List<String> names = userDataList.stream().filter(x -> x.length() > 1
+                && !stringContainsDigits(x)).toList();
         if (names.size() < 3) {
-            throw new UserDataParseException("Wrong spelling of names, capitalize");
+            throw new UserDataParseException("Name/surname/patronymic must be more than one letter and no numbers");
         } else {
             userData.setSurname(names.get(0));
             userData.setName(names.get(1));
@@ -71,4 +72,14 @@ public class UserDataParser {
         return date;
     }
 
+    private boolean stringContainsDigits(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isDigit(str.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
+
+

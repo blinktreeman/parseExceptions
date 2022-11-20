@@ -45,14 +45,7 @@ public class App {
 
         } catch (RuntimeException | IOException | InterruptedException e) {
             System.err.println(e.getMessage());
+            e.getStackTrace();
         }
-//
-//        try {
-//
-//        } catch (IOException e) {
-//            System.err.println(e.getMessage());
-//            e.getStackTrace();
-//        }
-
     }
 }

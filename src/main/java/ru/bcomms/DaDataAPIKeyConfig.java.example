@@ -1,0 +1,13 @@
+package ru.bcomms;
+
+public class DaDataAPIKeyConfig {
+
+    private DaDataAPIKeyConfig() {}
+
+    public static String getAPIKey() {
+        return "Token HERE YOU TOKEN";
+    }
+    public static String getSecretKey() {
+        return "HERE YOU SECRET KEY";
+    }
+}

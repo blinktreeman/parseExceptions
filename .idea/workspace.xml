@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3617ed8-5ca6-4552-ba26-5ddadd217a76" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/ExceptionsClasses/UserDataParseException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/ExceptionsClasses/WrongAmountOfDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/NamesDaDataRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/UserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/UserDataHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/UserDataParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/bcomms/UserDataRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/bcomms/AppTest.java" afterDir="false" />
+    <list default="true" id="d3617ed8-5ca6-4552-ba26-5ddadd217a76" name="Changes" comment="dadata request done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +75,17 @@
       <updated>1668865956850</updated>
       <workItem from="1668865959018" duration="1120000" />
       <workItem from="1668867107150" duration="6173000" />
+      <workItem from="1668850864355" duration="438000" />
+      <workItem from="1668926898049" duration="76000" />
     </task>
+    <task id="LOCAL-00001" summary="dadata request done">
+      <created>1668850961741</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668850961741</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,5 +101,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dadata request done" />
+    <option name="LAST_COMMIT_MESSAGE" value="dadata request done" />
   </component>
 </project>

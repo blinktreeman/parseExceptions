@@ -8,12 +8,12 @@ public class WriteUserDataToFile {
     UserData userData = UserDataHolder.getUserData();
 
     public void writeDataToFile() throws IOException {
-        String filePath = "./outputFiles/" + userData.getSurname() + ".txt";
+        String filePath = "src/main/java/ru/bcomms/outputFiles/" + userData.getSurname() + ".txt";
         File file = new File(filePath);
         if (!file.exists()) {
             boolean fileCreated = file.createNewFile();
             if (fileCreated) {
-                System.out.println("File " + filePath + " created");
+                System.out.println("File " + file.getName() + " created");
             }
         }
         try (FileWriter fileWriter = new FileWriter(file, true)) {
@@ -26,7 +26,6 @@ public class WriteUserDataToFile {
                     .append(userData.getPhoneNumber()).append("><")
                     .append(userData.getGender()).append(">\n");
             fileWriter.write(stringBuilder.toString());
-            System.out.println("done!");
 
         } catch (IOException e) {
             throw new IOException(e);

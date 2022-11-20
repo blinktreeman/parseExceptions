@@ -29,7 +29,7 @@ import java.io.IOException;
 
 public class App {
     public static void main(String[] args) {
-//        Test String = "Иванов 12.12.1970 Иванович Иван m 322223";
+//        Test String = "Петров 12.12.1970 Иванович m Сергей 322223";
         try {
             UserDataRequest dataRequest = new UserDataRequest();
             dataRequest.requestDataFromUser();
@@ -40,24 +40,19 @@ public class App {
             NamesDaDataRequest namesDaDataRequest = new NamesDaDataRequest();
             namesDaDataRequest.sendDaDataRequest();
 
+            WriteUserDataToFile writeUserDataToFile = new WriteUserDataToFile();
+            writeUserDataToFile.writeDataToFile();
+
         } catch (RuntimeException | IOException | InterruptedException e) {
             System.err.println(e.getMessage());
         }
+//
+//        try {
+//
+//        } catch (IOException e) {
+//            System.err.println(e.getMessage());
+//            e.getStackTrace();
+//        }
 
-        try {
-            WriteUserDataToFile writeUserDataToFile = new WriteUserDataToFile();
-            writeUserDataToFile.writeDataToFile();
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
-            e.getStackTrace();
-        }
-
-
-        System.out.println(UserDataHolder.getUserData().getSurname());
-        System.out.println(UserDataHolder.getUserData().getName());
-        System.out.println(UserDataHolder.getUserData().getPatronymic());
-        System.out.println(UserDataHolder.getUserData().getDateOfBirth());
-        System.out.println(UserDataHolder.getUserData().getPhoneNumber());
-        System.out.println(UserDataHolder.getUserData().getGender());
     }
 }

@@ -25,11 +25,12 @@ public class NamesDaDataRequest {
                             URI.create("https://cleaner.dadata.ru/api/v1/clean/name"))
                     .header("Content-Type", "application/json")
                     .header("Accept", "application/json")
-                    .header("Authorization", "Token " + DaDataAPIKeyConfig.getAPIKey())
+                    .header("Authorization", DaDataAPIKeyConfig.getAPIKey())
                     .header("X-Secret", DaDataAPIKeyConfig.getSecretKey())
                     .POST(HttpRequest.BodyPublishers.ofString(requestString))
                     .build();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            System.out.println(response.body());
 
             if (response.statusCode() == 200) {
                 ArrayList<Map<String, String>> responseList =
@@ -38,6 +39,7 @@ public class NamesDaDataRequest {
                 UserDataHolder.getUserData().setName(responseMap.get("name"));
                 UserDataHolder.getUserData().setSurname(responseMap.get("surname"));
                 UserDataHolder.getUserData().setPatronymic(responseMap.get("patronymic"));
+
             }
         } catch (IOException e) {
             throw new IOException("Error request to DaData API");

@@ -56,7 +56,7 @@ public class UserDataParser {
 ```
 - имена заданы одной буквой или содержат цифры
 ```java
-hrow new UserDataParseException("Name/surname/patronymic must be more than one letter and no numbers");
+throw new UserDataParseException("Name/surname/patronymic must be more than one letter and no numbers");
 ```
 При удачном парсинге данные записываются в поле класса UserDataHolder
 ```java
